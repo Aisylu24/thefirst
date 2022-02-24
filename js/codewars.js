@@ -8,6 +8,7 @@ function numberToString(num) {
 
  // Find the Remainder
 
+<<<<<<< HEAD
  function remainder(n, m){
     if(n > m){
       return n % m
@@ -15,5 +16,8 @@ function numberToString(num) {
       return m % n
     }
     }
+=======
+
+>>>>>>> 0f2b244404025e5c1ce21c65ed735ed6b0ed2c5f
 
 
