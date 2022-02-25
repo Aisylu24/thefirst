@@ -31,4 +31,7 @@ const cannonsReady = (gunners) => {
        } 
 }
 
-//
+// For Twins: 2. Math operations
+ 
+function iceBrickVolume(radius, bottleLength, rimLength) {
+  return Math.trunc((bottleLength-rimLength) * radius * Math.sqrt(2) * radius * Math.sqrt(2));
