@@ -42,3 +42,14 @@ function iceBrickVolume(radius, bottleLength, rimLength) {
 function filter_list(l) {
   return l.filter(element => typeof element === "number")
  }
+
+
+ // Powers of 2
+
+ function powersOfTwo(n){ 
+  let res = []
+for (i=0; i<=n; i++) { 
+  res.push(Math.pow(2,i))
+}
+return res
+}
