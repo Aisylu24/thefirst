@@ -35,3 +35,10 @@ const cannonsReady = (gunners) => {
  
 function iceBrickVolume(radius, bottleLength, rimLength) {
   return Math.trunc((bottleLength-rimLength) * radius * Math.sqrt(2) * radius * Math.sqrt(2));
+
+
+// List Filtering
+
+function filter_list(l) {
+  return l.filter(element => typeof element === "number")
+ }
