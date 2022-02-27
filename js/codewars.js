@@ -53,3 +53,13 @@ for (i=0; i<=n; i++) {
 }
 return res
 }
+
+
+//String repeat
+
+function repeatStr (n, s) {
+  let res = '';
+  for (i = 0; i < n; i++) {
+    res += s;
+          }
+  return res;}
