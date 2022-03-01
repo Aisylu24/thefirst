@@ -1,10 +1,14 @@
 const myStr = "I am a \"double quoted\" string inside \"double quotes\"."; // Change this line
+
 //
 const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+
 //
 const myStr ="FirstLine\n\t\\SecondLine\nThirdLine"
+
 //
 const myStr = "This is the start. " + "This is the end.";
+
 //
 let myStr = "This is the first sentence. ";
 myStr+="This is the second sentence." 
@@ -73,7 +77,10 @@ const myVerb = "ran";
 const myAdverb = "quickly";
 
 // Only change code below this line
-const wordBlanks =  "this " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + " around a house" + "."; // Change this line
-// Only change code above this line
+const wordBlanks = "my " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + " here"
 
-console.log(wordBlanks)
+
+//
+
+const myArray = [18, 64, 99];
+const[0] = 45
