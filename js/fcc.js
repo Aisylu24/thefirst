@@ -49,38 +49,49 @@ myStr = "Hello World"; // Change this line
 
 //
 
-// Setup
 const lastName = "Lovelace";
-
-// Only change code below this line
 const thirdLetterOfLastName = lastName[2]; // Change this line
 
 
 //
 
 const lastName = "Lovelace";
-
-// Only change code below this line
 const lastLetterOfLastName = lastName[lastName.length -1]; // Change this line
 
 //
 const lastName = "Lovelace";
-
-// Only change code below this line
 const secondToLastLetterOfLastName = lastName[lastName.length-2]; // Change this line
 
 //
-
 const myNoun = "dog";
 const myAdjective = "big";
 const myVerb = "ran";
 const myAdverb = "quickly";
-
-// Only change code below this line
 const wordBlanks = "my " + myAdjective + " " + myNoun + " " + myVerb + " " + myAdverb + " here"
 
 
 //
-
 const myArray = [18, 64, 99];
 const[0] = 45
+
+//
+const myArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14],
+  ];
+  
+  const myData = myArray[2][1];
+
+
+//
+  const myArray = [["John", 23], ["cat", 2]];
+myArray.push(["dog", 3])
+
+
+//
+const myArray = [["John", 23], ["cat", 2]];
+const removedFromMyArray = myArray.pop()
+
+//
