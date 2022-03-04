@@ -95,10 +95,7 @@ function repeatStr (n, s) {
   // Is the date today
 
   function isToday(date) {
-    if  (new Date().toDateString() === date.toDateString()) { 
-    return true
-    }
-    else return false 
-    }
+    return new Date().toDateString() === date.toDateString();
+  }
     
     
