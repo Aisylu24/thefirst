@@ -82,3 +82,23 @@ function repeatStr (n, s) {
     return (usd*6.75).toFixed(2) + ' Chinese Yuan'
       
     }
+
+ // Difference of Volumes of Cuboids
+ 
+ 
+ function findDifference(a, b) {
+  return Math.abs((a[0] * a[1] * a[2]) - (b[0] * b[1] * b[2]))
+  
+  }
+
+
+  // Is the date today
+
+  function isToday(date) {
+    if  (new Date().toDateString() === date.toDateString()) { 
+    return true
+    }
+    else return false 
+    }
+    
+    
