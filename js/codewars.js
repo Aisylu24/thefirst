@@ -98,4 +98,22 @@ function repeatStr (n, s) {
     return new Date().toDateString() === date.toDateString();
   }
     
+
+  //
+
+
+  function smash (words) {
+
+    return words.join(" ")
+ };
+
+
+
+ // Filter out the geese
+
+
+ function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+return birds.filter( i => geese.includes(i))
+};
     
