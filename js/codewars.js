@@ -111,9 +111,19 @@ function repeatStr (n, s) {
 
  // Filter out the geese
 
-
  function gooseFilter (birds) {
   var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-return birds.filter( i => geese.includes(i))
+return birds.filter( el => !geese.includes(el));
+
 };
-    
+
+//Double Char
+
+function doubleChar(str) {
+  let res ="";
+  for (let i = 0; i < str.length; i++) {
+   res += str[i] + str[i];
+  }
+  return res
+  }
+  
