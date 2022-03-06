@@ -127,3 +127,11 @@ function doubleChar(str) {
   return res
   }
   
+  //
+
+
+  function isPalindrome(x) {
+    let rev = x.toLowerCase().split("").reverse().join("");
+    return x.toLowerCase() === rev;
+  }
+    
