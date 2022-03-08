@@ -133,5 +133,27 @@ function doubleChar(str) {
   function isPalindrome(x) {
     let rev = x.toLowerCase().split("").reverse().join("");
     return x.toLowerCase() === rev;
-  }
+  }} 
+
+
+  // Find Maximum and Minimum Values of a List
+
+
+  var min = function(list){
+    return  Math.min.apply(null, list)
+         
+    }
     
+    var max = function(list){
+    return Math.max.apply(null, list)
+    }
+    
+
+
+// Returning Strings
+
+function greet(name){
+  let greet = "Hello, " + name + " how are you doing today?"
+  return greet
+    
+  }
