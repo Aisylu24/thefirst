@@ -573,7 +573,7 @@ break;
   // Only change code above this line
   return answer;
 }
-sequentialSizes(1);
+ sequentialSizes(1);
 
 
 //5 
@@ -649,17 +649,19 @@ if (count >0) {holdbet = "Bet"}
 return count + " " + holdbet;
 
 }
+
+
 cc(2); cc(3); cc(7); cc('K'); cc('A');
 
 
 //9 
 
-let myDog = {
+let myDog1 = {
 name: "Dog",
 tails: 1,
 legs: 4,
 friends: ["people", "another dogs"]
-};
+}
 
 
 // 10
@@ -687,5 +689,260 @@ const drinkValue = testObj["the drink"]
 
 
 
-//12
+// 0903 1  
 
+
+const testObj = {
+  12: "Namath",
+  16: "Montana",
+  19: "Unitas"
+};
+
+const playerNumber = 16;  
+const player = testObj[playerNumber];  
+
+console.log(player);
+
+
+
+// 2
+
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+myDog.name = "Happy Coder"
+myDog["name"] = "Happy Coder"
+console.log(myDog.name)
+
+//3 
+
+const myDog = {
+  "name": "Happy Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark = "woof"
+
+myDog["bark"] = "woof"
+
+console.log(myDog)
+
+// 4
+
+delete myDog.tails
+
+// 5
+
+  
+function phoneticLookup(val) {
+  let result = "";
+
+ const lookup = {
+    "alpha": "Adams",
+    "bravo":"Boston",
+    "charlie":"Chicago",
+     "delta":"Denver",
+     
+     "echo":"Easy",
+      
+     "foxtrot":"Frank",
+  };
+result = lookup[val]
+  // Only change code above this line
+  return result;
+}
+
+console.log(phoneticLookup("charlie"))
+
+
+
+// 6 
+
+  function checkObj(obj, checkProp) {
+  if(obj.hasOwnProperty(checkProp))
+  return obj[checkProp];
+    // Only change code below this line
+  return "Not Found";
+    // Only change code above this line
+  }
+
+  
+
+  // 7 
+  const myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    },
+  
+   {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "youtube",
+        "TV"
+      ],
+  
+   }
+    
+  ];
+
+
+
+  // 8 
+
+
+  const myStorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+       },
+      "outside": {
+        "trunk": "jack"
+      }
+    }
+  };
+  
+  const gloveBoxContents = myStorage.car.inside["glove box"]
+  
+  console.log(gloveBoxContents)
+
+
+  //9 
+
+  const myPlants = [
+    {
+      type: "flowers",
+      list: [
+        "rose",
+        "tulip",
+        "dandelion"
+      ]
+    },
+    {
+      type: "trees",
+      list: [
+        "fir",
+        "pine",
+        "birch"
+      ]
+    }
+  ];
+  
+  const secondTree = myPlants[1].list[1];
+  console.log(secondTree)
+
+
+  //10
+
+
+// Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+
+function updateRecords(records, id, prop, value) {
+  if (prop !== 'tracks' && value !== "") {
+    records[id][prop] = value;
+  } else if (prop === "tracks" && records[id].hasOwnProperty("tracks") === false) {
+    records[id][prop] = [value];
+  } else if (prop === "tracks" && value !== "") {
+    records[id][prop].push(value);
+  } else if (value === "") {
+    delete records[id][prop];
+  }
+  return records;
+
+updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+//11 while
+const myArray = [];
+let i = 5;
+while(i >= 0){
+    myArray.push(i);
+    i--;
+
+ // 543210
+
+const myArray2 = [];
+let i = 5;
+while(i){
+    myArray.push(i);
+    i--;
+
+// 54321
+
+
+//12 for
+
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+// ourArray теперь будет иметь значение [0, 1, 2, 3, 4].
+
+const myArray = [];
+for (let i=1; i < 6; i++) 
+{
+  myArray.push(i)
+}
+
+//13
+
+const myArray = [];
+
+for ( let i=1; i<10; i+=2) {
+  myArray.push(i)
+}
+
+// myArrayдолжно равняться [1, 3, 5, 7, 9].
+
+//14 
+
+const myArray = [];
+for( let i = 9; i>0; i-=2 ) {
+  myArray.push(i);
+}
+
+// myArrayдолжно равняться [9, 7, 5, 3, 1].
+
+
+//15 
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+total+= myArr[i]
+}
