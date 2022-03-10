@@ -167,4 +167,14 @@ function greet(name){
   
     }
 
-     
+
+   // Area of a Square
+
+   function squareArea(A){
+    let r= (4 * A)/ (2 * Math.PI)
+    let res = Math.pow(r, 2);
+    return Math.round(res*100)/100
+  }
+
+  
+    const squareArea = A => Number(((2 * A / 3.1416)**2).toFixed(2))
