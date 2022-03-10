@@ -946,3 +946,104 @@ let total = 0;
 for (let i = 0; i < myArr.length; i++) {
 total+= myArr[i]
 }
+
+
+// 1003 1
+
+
+function multiplyAll(arr) {
+  let product = 1;
+  
+  // Only change code below this line
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+     product = arr[i][j]*product
+  }}
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]])
+
+
+// 2
+
+const myArray = [];
+let i = 10;
+
+// Only change code below this line
+do 
+{ myArray.push(i);
+i++;
+} while (i < 5 ) 
+  
+console.log(i,myArray)
+
+
+//3 Рекурсия повторить
+
+function sum(arr, n) {
+  if (n <= 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
+  }
+}
+
+
+console.log(sum)
+
+
+//4 
+
+const contacts = [
+  {
+    firstName: "Akira",
+    lastName: "Laine",
+    number: "0543236543",
+    likes: ["Pizza", "Coding", "Brownie Points"],
+  },
+  {
+    firstName: "Harry",
+    lastName: "Potter",
+    number: "0994372684",
+    likes: ["Hogwarts", "Magic", "Hagrid"],
+  },
+  {
+    firstName: "Sherlock",
+    lastName: "Holmes",
+    number: "0487345643",
+    likes: ["Intriguing Cases", "Violin"],
+  },
+  {
+    firstName: "Kristian",
+    lastName: "Vos",
+    number: "unknown",
+    likes: ["JavaScript", "Gaming", "Foxes"],
+  },
+];
+
+function lookUpProfile(name, prop) {
+
+  for (let x = 0; x < contacts.length; x++) {
+    if (contacts[x].firstName === name) {
+      if (contacts[x].hasOwnProperty(prop)) {
+        return contacts[x][prop];
+      } else {
+        return "No such property";
+      }
+    }
+  }
+  return "No such contact";
+}
+
+
+lookUpProfile("Akira", "likes");
+
+
+//5 
+
+function randomFraction() {
+  let a = Math.random()
+    return a;
+  }

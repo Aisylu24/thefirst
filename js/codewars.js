@@ -178,3 +178,21 @@ function greet(name){
 
   
     const squareArea = A => Number(((2 * A / 3.1416)**2).toFixed(2))
+
+
+
+    // What is between?
+    function between(a, b) {
+
+      function between(a, b) {
+       let arr = [];
+       
+       for (let i = a; i <= b; i++) {
+       
+         arr.push(i);
+       }
+       
+       return arr;
+     }
+     
+     }
