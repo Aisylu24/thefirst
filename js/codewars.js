@@ -196,3 +196,14 @@ function greet(name){
      }
      
      }
+
+// varitaion 2
+     function between(a, b) {  
+      const betweenArray = []
+      
+      while (a <= b) {
+        betweenArray.push(a);
+        a++;
+      }
+      
+      return betweenArray;

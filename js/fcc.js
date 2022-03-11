@@ -71,23 +71,23 @@ const wordBlanks = "my " + myAdjective + " " + myNoun + " " + myVerb + " " + myA
 
 
 //
-const myArray = [18, 64, 99];
-const[0] = 45
+const myArray111 = [18, 64, 99];
+const myArray111[0] = 45;
 
 //
-const myArray = [
+const myArray333 = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9],
     [[10, 11, 12], 13, 14],
   ];
   
-  const myData = myArray[2][1];
+  const myData = myArray333[2][1];
 
 
 //
-  const myArray = [["John", 23], ["cat", 2]];
-myArray.push(["dog", 3])
+  const myArray444 = [["John", 23], ["cat", 2]];
+myArray444.push(["dog", 3])
 
 
 //
@@ -242,7 +242,7 @@ function nextInLine(arr, item) {
   // 9
 
   function welcomeToBooleans() {
-    return true;
+    return true; }
     
 
 // 10
@@ -651,7 +651,7 @@ return count + " " + holdbet;
 }
 
 
-cc(2); cc(3); cc(7); cc('K'); cc('A');
+/* cc(2); cc(3); cc(7); cc('K'); cc('A'); */
 
 
 //9 
@@ -666,14 +666,14 @@ friends: ["people", "another dogs"]
 
 // 10
 
-const testObj = {
+const testObj55 = {
   "hat": "ballcap",
   "shirt": "jersey",
   "shoes": "cleats"
 };
 
-const hatValue = testObj.hat     
-const shirtValue = testObj.shirt  
+const hatValue = testObj55.hat     
+const shirtValue = testObj55.shirt  
 
 
 // 11
@@ -882,24 +882,24 @@ function updateRecords(records, id, prop, value) {
   } else if (value === "") {
     delete records[id][prop];
   }
-  return records;
+  return records; }
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
 //11 while
-const myArray = [];
+const myArray6 = [];
 let i = 5;
-while(i >= 0){
+while(i >= 0) {
     myArray.push(i);
-    i--;
+    i--;}
 
  // 543210
 
-const myArray2 = [];
+const myArray5 = [];
 let i = 5;
-while(i){
+while(i) {
     myArray.push(i);
-    i--;
+    i--; }
 
 // 54321
 
@@ -913,7 +913,7 @@ for (let i = 0; i < 5; i++) {
 }
 // ourArray теперь будет иметь значение [0, 1, 2, 3, 4].
 
-const myArray = [];
+const myArray4 = [];
 for (let i=1; i < 6; i++) 
 {
   myArray.push(i)
@@ -921,7 +921,7 @@ for (let i=1; i < 6; i++)
 
 //13
 
-const myArray = [];
+const myArray3 = [];
 
 for ( let i=1; i<10; i+=2) {
   myArray.push(i)
@@ -931,7 +931,7 @@ for ( let i=1; i<10; i+=2) {
 
 //14 
 
-const myArray = [];
+const myArray2 = [];
 for( let i = 9; i>0; i-=2 ) {
   myArray.push(i);
 }
@@ -968,16 +968,16 @@ multiplyAll([[1, 2], [3, 4], [5, 6, 7]])
 
 // 2
 
-const myArray = [];
+const myArray7 = [];
 let i = 10;
 
 // Only change code below this line
 do 
-{ myArray.push(i);
+{ myArray7.push(i);
 i++;
 } while (i < 5 ) 
   
-console.log(i,myArray)
+console.log(i,myArray7)
 
 
 //3 Рекурсия повторить
@@ -1047,3 +1047,246 @@ function randomFraction() {
   let a = Math.random()
     return a;
   }
+
+
+  //1103 1
+
+  function randomWholeNum() {
+    return Math.floor(Math.random() * 10);;
+  }
+  
+//2
+
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return Math.floor(Math.random()* (myMax - myMin +1)) + myMin
+  // Only change code above this line
+}
+
+
+console.log(randomRange(1,25))
+
+
+//3
+
+function convertToInteger(str) {
+  return parseInt(str)
+  }
+  
+  convertToInteger("56");
+
+// 4
+
+function convertToInteger(str) {
+  return parseInt(str, 2);
+  }
+  
+  convertToInteger("10011");
+
+//5
+
+function checkEqual(a, b) {
+  return a == b ? "Equal" : "Not Equal";
+  }
+  
+  checkEqual(1, 2);
+
+
+  //6 
+  function checkSign(num) {
+    return (num > 0) ? "positive"
+    : (num<0) ? "negative"
+    : "zero"
+    }
+    
+    checkSign(10);
+
+ 
+// 7 
+
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const arr = countdown(n - 1);
+    arr.unshift(n);
+    return arr;
+  }
+}
+
+
+//8
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    console.log(numbers)
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+
+rangeOfNumbers(1, 5)
+
+
+//9
+function checkScope() {
+
+  let i = 'function scope';
+  if (true) {
+   let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+
+
+checkScope()
+
+
+//10
+
+
+const s = [5, 7, 2];
+function editInPlace() {
+s[0]=2
+s[1]=5
+s[2]=7
+return s
+}
+editInPlace();
+
+
+//11
+
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  // Only change code below this line
+  
+Object.freeze(MATH_CONSTANTS)
+
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+
+
+//12
+
+const magic = () => new Date();
+
+
+//13 
+
+
+// Как и в случае с обычной функцией, вы можете передавать аргументы в функцию со стрелкой.
+
+const doubler = (item) => item * 2;
+doubler(4);
+doubler(4)вернет значение 8.
+
+// Если стрелочная функция имеет один параметр, круглые скобки, заключающие этот параметр, могут быть опущены.
+
+const doubler = item => item * 2;
+
+// solution 
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+console.log(myConcat([1, 2], [3, 4, 5]));
+
+
+// 14
+
+
+// Only change code below this line
+const increment = (number , value = 1) => number + value;
+// Only change code above this line
+
+
+//15 Use the Rest Parameter with Function Parameters
+
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
+console.log(sum(2, 4, 6)); 
+
+//16
+
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+
+arr2 = [...arr1];  // Change this line
+
+console.log(arr2);
+
+
+//17
+
+Рассмотрим следующий код ES5:
+
+const user = { name: 'John Doe', age: 34 };
+
+const name = user.name;
+const age = user.age;
+nameбудет иметь значение строки John Doeи ageчисло 34.
+
+Вот эквивалентный оператор присваивания, использующий синтаксис деструктурирования ES6:
+
+const { name, age } = user;
+
+
+//
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const {today,  tomorrow} = HIGH_TEMPERATURES
+
+
+//18
+
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+
+const { today: highToday, tomorrow: highTomorrow } = HIGH_TEMPERATURES
+
+
+//19
+
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+
+// Only change code below this line
+ 
+const {today: {low: lowToday, high: highToday}}= LOCAL_FORECAST
+
+
+
+//20
+
+let a = 8, b = 6;
+// Only change code below this line
+
+[a, b] = [b, a];
+
+
