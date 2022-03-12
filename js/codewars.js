@@ -207,3 +207,46 @@ function greet(name){
       }
       
       return betweenArray;
+
+
+ // Pillars
+ 
+ function pillars(num, dist, width) {
+  if (num == 1) 
+  return 0
+    else if (num>1) 
+  return ((num -2) * width) + ( (num -1) * (dist*100))
+  }
+
+
+// Sum of positive
+  function positiveSum(arr) {
+    var sum = 0;
+    for(var i = 0; i < arr.length; i++) {
+       if(arr[i] > 0) {
+        sum += arr[i];
+      }
+     }
+    return sum;
+    }
+    
+
+
+  // Enumerable Magic #25 - Take the First N Elements
+  
+  function take(arr, n) {
+    return arr.slice(0, n)
+      // Your code here
+    }
+
+   console.log(take([0, 1, 2, 3, 5, 8, 13], 3))
+
+
+   //Is it even?
+
+   function testEven(n) {
+    if (n%2 == 0)
+    return true
+    else return false
+        //Your awesome code here!
+    }

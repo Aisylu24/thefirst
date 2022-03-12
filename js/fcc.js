@@ -1290,3 +1290,205 @@ let a = 8, b = 6;
 [a, b] = [b, a];
 
 
+
+
+// 1203 1
+
+const source = [1,2,3,4,5,6,7,8,9,10];
+function removeFirstTwo(list) {
+ 
+ const [a, b, ...arr] = list; 
+ 
+  return arr;
+}
+const arr = removeFirstTwo(source);
+
+// 2
+
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+
+const half = ({ max, min }) => (max + min) / 2.0;
+
+
+//3
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = []
+  for (let i = 0; i < arr.length; i++)
+  failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+
+
+
+// solution 2
+ function makeList(arr) {
+  "use strict";
+  // change code below this line
+  const failureItems = arr.map(item => `<li class="text-warning">${item}</li>`);
+  // change code above this line
+  return failureItems;
+}
+const failuresList = makeList(result.failure);
+
+
+//4
+// their
+const createPerson = (name, age, gender) => {
+  "use strict";
+  return {
+    name,
+    age,
+    gender
+  };
+};
+
+//my
+
+const createPerson = (name, age, gender) => ({
+   name, age, gender
+});
+
+
+//5 
+
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+
+// 6 
+
+
+class Vegetable {
+  constructor(name) {
+    this.name = name
+  }
+}
+const carrot = new Vegetable('carrot');
+console.log(carrot); 
+
+
+// 7
+
+class Thermostat {
+  constructor(fahrenheit) {
+    this.fahrenheit = fahrenheit;
+  }
+  
+  get temperature() {
+    return (5 / 9) * (this.fahrenheit - 32);
+  }
+  
+  set temperature(celsius) {
+    this.fahrenheit = (celsius * 9.0) / 5 + 32;
+  }
+}
+
+// Only change code above this line
+
+const thermos = new Thermostat(76); // Setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in Celsius
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in Celsius
+
+
+//8
+
+<script type="module" src="index.js"></script>
+
+//9 
+ // my way 
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString };
+
+//their 
+export const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+//10
+
+import {uppercaseString, lowercaseString } from "./string_functions.js"
+
+// Only change code above this line
+
+uppercaseString("hello");
+lowercaseString("WORLD!");
+
+
+//11
+
+import * as stringFunctions from "./string_functions.js"
+// Only change code above this line
+
+stringFunctions.uppercaseString("hello");
+stringFunctions.lowercaseString("WORLD!");
+
+
+//12
+
+"use strict";
+export default function subtract(x, y) {
+  return x - y;
+}
+
+//13
+
+import subtract from "./math_functions.js";
+// Only change code above this line
+
+subtract(7,4);
+
+
+//14 
+
+
+const makeServerRequest = new Promise((resolve,reject) => {} )
+
+
+//15
+
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer; 
+  if(responseFromServer) { 
+   resolve("We got the data");
+  } else {  
+     reject("Data not received");
+
+  }
+});
+
+
+//16
+
+
