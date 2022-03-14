@@ -1568,18 +1568,23 @@ let result = extractStr.match(codingRegex); // Change this line
 console.log(result)
 
 
-//8
+//8 
 
 let twinkleStar = "Twinkle, twinkle, little star";
 let starRegex = /twinkle/gi; // Change this line
 let result = twinkleStar.match(starRegex); // Change this line
+
+console.log(result); // [ 'Twinkle', 'twinkle' ]
 
 
 //9
 
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/; // Change this line
-let result = unRegex.test(exampleStr);
+let result = unRegex.test(exampleStr); // true
+let res = exampleStr.match(unRegex);
+
+console.log(res); // fun 
 
 
 //10
@@ -1588,6 +1593,15 @@ let result = unRegex.test(exampleStr);
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // Change this line
 let result = quoteSample.match(vowelRegex); // Change this line
+console.log(result); 
+/*
+[
+  'e', 'a', 'e', 'o', 'u', 'i',
+  'e', 'a', 'o', 'e', 'o', 'e',
+  'I', 'a', 'e', 'o', 'o', 'e',
+  'i', 'o', 'e', 'o', 'i', 'e',
+  'i'
+] */
 
 
 //11
@@ -1595,19 +1609,23 @@ let result = quoteSample.match(vowelRegex); // Change this line
 let quoteSample = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi; // Change this line
 let result = quoteSample.match(alphabetRegex); // Change this line
+console.log(result) // весь текст 
 
-//12
+
+//12 
 
 let quoteSample = "Blueberry 3.141592653s are delicious.";
 let myRegex = /[h-s2-6]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
-
+console.log(result)
 
 //13
 
 let quoteSample = "3 blind mice.";
 let myRegex = /[^aeiou^0-9]/gi; // Change this line
 let result = quoteSample.match(myRegex); // Change this line
+console.log(result) 
+
 
 //14
 
@@ -1615,6 +1633,8 @@ let result = quoteSample.match(myRegex); // Change this line
 let difficultSpelling = "Mississippi";
 let myRegex = /s+/g; // Change this line
 let result = difficultSpelling.match(myRegex); // [ 'ss', 'ss' ]
+
+
 
 //15
 
@@ -1630,19 +1650,19 @@ let result = chewieQuote.match(chewieRegex);
 let text = "<h1>Winter is coming</h1>";
 let myRegex = /<.*?>/; // it's the answer!
 let result = text.match(myRegex);
-
+console.log(result) 
 
 //17
 
 let reCriminals = /C+/; // Change this line
 
-//18
+//18 ^ - in the start
 
 let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result = calRegex.test(rickyAndCal);
 
-//19
+//19 $ - in the end
 
 let caboose = "The last car on a train is the caboose";
 let lastRegex = /caboose$/; // Change this line
@@ -1653,3 +1673,158 @@ let result = lastRegex.test(caboose);
 let quoteSample = "The five boxing wizards jump quickly.";
 let alphabetRegexV2 = /\w/g; // Change this line
 let result = quoteSample.match(alphabetRegexV2).length;
+
+
+// 1403 1 
+
+let quoteSample = "the five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result = quoteSample.match(nonAlphabetRegex).length;
+
+console.log(result)
+
+
+//2 [0-9]
+
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result = movieName.match(numRegex).length;
+
+
+//3 [^0-9]
+
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result = movieName.match(noNumRegex).length;
+
+
+//4
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+console.log(result)
+
+
+//5 \s - пробелы 
+
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace).length;
+
+
+// 6 \S - не пробелы 
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace).length;
+
+
+//7 {3,6}
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+
+//8 {4,}
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+
+
+//9 {4}
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
+
+
+//10
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+
+
+//11
+
+let sampleWord = "astronaut";
+let pwRegex =  /(?=\w{6})(?=\w*\d{2})/;
+let result = pwRegex.test(sampleWord);
+
+
+//12
+
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Franklin D.|Eleanor)\sRoosevelt/; ///(Franklin|Eleanor).*Roosevelt/;
+let result = myRegex.test(myString)
+
+//13
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/;
+let result = reRegex.test(repeatNum);
+
+
+//14
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result = str.replace(fixRegex, replaceText);
+
+//15 
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ""); // Change this line
+
+
+//16
+
+let a = 5;
+let b = 1;
+a++;
+
+let sumAB = a + b;
+console.log(sumAB);
+
+console.log(a)
+
+
+//17
+
+let output = "Get this to show once in the freeCodeCamp console and not at all in the browser console";
+
+console.log(output) 
+console.clear() 
+
+
+//18
+
+
+let seven = 7;
+let three = "3";
+console.log(seven + three);
+// Only change code below this line
+console.log(typeof seven)
+console.log(typeof three)
+
+
+//19
+
+let receivables = 10;
+let payables = 8;
+let netWorkingCapital = receivables - payables;
+console.log(`Net working capital is: ${netWorkingCapital}`);
+
+//20
+
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous, current) =>  previous + current);
+console.log(`Sum of array values is: ${arraySum}`);
+
+
+
