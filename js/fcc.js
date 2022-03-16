@@ -2020,9 +2020,21 @@ newArr.push([...arr])
   return newArr;
 }
 
-console.log(copyMachine([true, false, true
+console.log(copyMachine([true, false, true]))
 
 
 
+//16
+
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning',...fragment, 'is', 'fun']
+  return sentence;
+}
+
+console.log(spreadOut())
+
+
+//17
 
 
