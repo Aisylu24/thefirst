@@ -206,7 +206,7 @@ function greet(name){
         a++;
       }
       
-      return betweenArray;
+      return betweenArray; }
 
 
  // Pillars
@@ -250,3 +250,66 @@ function greet(name){
     else return false
         //Your awesome code here!
     }
+
+
+
+    // Semi-Optional
+    function wrap(value) {
+      return {value}
+    
+    }
+
+
+//Define a card suit
+// my
+function defineSuit(card) {
+  if (card.includes('♣')) {
+    return "clubs";
+  }
+  else if (card.includes('♦')) {
+    return "diamonds";
+  }
+  else if (card.includes('♥')) {
+    return "hearts";
+  }
+  else if (card.includes('♠')) {
+    return "spades";
+  }
+};
+
+// smart
+    function defineSuit(card) {
+
+      var suit = card.substr(-1);
+      switch(suit){
+      case '♣': return 'clubs';
+      case '♦': return 'diamonds';
+      case '♥': return 'hearts';
+      default: return 'spades';
+      }
+      };
+
+
+    // Sum The Strings
+    function sumStr(a,b) {
+      return String(Number(a)+Number(b))
+        
+      }
+
+
+      // Hex to Decimal
+
+      const hexToDec = hexString => parseInt(hexString, 16)
+
+
+      // Exclamation marks series #1: Remove an exclamation mark from the end of string
+
+
+      function remove(s) {
+        if (s[s.length - 1] === "!") {
+            return s.slice(0, s.length - 1);
+        } else {
+            return s
+        }
+    }
+      
