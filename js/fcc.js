@@ -2340,3 +2340,212 @@ function findLongestWordLength(str) {
 }
 
 
+// 1803 1
+
+function largestOfFour(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let max = arr[i][0];
+    for (let j = 1; j < arr[i].length; j++) {
+      if (arr[i][j] > max) {
+        max = arr[i][j];
+      }
+    }
+    newArr[i] = max;
+  }
+
+  return newArr;
+}
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+// 
+
+function largestOfFour(arr) {
+  return arr.map(function(group) {
+    return group.reduce(function(prev, current) {
+      return current > prev ? current : prev;
+    });
+  });
+}
+
+
+// 
+function largestOfFour(arr) {
+  return arr.map(Function.apply.bind(Math.max, null));
+}
+
+
+//2
+
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+ 
+  return str.slice(str.length - target.length) === target;
+ 
+}
+
+confirmEnding("He has to give me a new name", "name");
+
+
+//
+function confirmEnding(str, target) {
+  return str.slice(-target.length) === target
+}
+
+confirmEnding("Bastian", "n");
+
+
+//3
+
+function repeatStringNumTimes(str, num) {
+  let newStr = "";
+
+  for (let i = 0; i < num; i++) {
+    newStr += str;
+  }
+
+  return newStr;
+}
+
+
+
+//4  Truncate a String
+
+function truncateString(str, num) {
+  if (str.length > num) {
+    return str.slice(0, num) + "...";
+  } else {
+    return str;
+  }
+}
+
+
+//5 Finders Keepers
+
+function findElement(arr, func) {
+  let num = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    num = arr[i];
+    if (func(num)) {
+      return num;
+    }
+  }
+  return undefined;
+
+}
+
+
+//
+function findElement(arr, func) {
+  return arr.find(func);
+}
+
+
+
+//6
+
+function booWho(bool) {
+  if (bool === true || bool === false)
+  return true
+  else return false
+}
+
+booWho(null);
+
+
+
+// 
+
+function booWho(bool) {
+  return typeof bool === "boolean";
+}
+
+booWho(null);
+
+
+
+//7
+
+function titleCase(str) {
+  const arr = str.split(" ");
+  const newArr = [];
+  for (let i in arr) {
+    newArr[i] = arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase();
+  }
+  return newArr.join(" ");
+}
+
+
+}
+
+
+//8
+
+function frankenSplice(arr1, arr2, n) {
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return localArray;
+}
+
+
+//9
+
+function bouncer(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) newArr.push(arr[i]);
+  }
+  return newArr;
+}
+bouncer([7, "ate", "", false, 9]);
+
+
+
+//
+
+function bouncer(arr) {
+  return arr.filter(Boolean);
+}
+
+//10
+
+function getIndexToIns(arr, num) {
+  arr.sort((a, b) => a - b);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= num)
+      return i;
+  }
+
+  return arr.length;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
