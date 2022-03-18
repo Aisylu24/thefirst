@@ -313,3 +313,17 @@ function defineSuit(card) {
         }
     }
       
+
+
+    //Heads and Legs
+
+
+    function animals(heads, legs){
+      let cow = (legs - heads * 2) / 2;
+      let chicken = heads - (legs - heads * 2) / 2;
+      if (chicken < 0 || cow < 0 || Math.round(chicken) != chicken || Math.round(cow) != cow){
+        return "No solutions";
+      }else{
+        return [chicken, cow];
+      }
+    }
