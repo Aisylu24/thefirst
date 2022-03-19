@@ -2531,14 +2531,138 @@ function getIndexToIns(arr, num) {
 
 
 
+// 1903 1
+
+
+function mutation(arr) {
+  let test = arr[1].toLowerCase();
+  let target = arr[0].toLowerCase();
+  for (let i = 0; i < test.length; i++) {
+    if (target.indexOf(test[i]) < 0) return false;
+  }
+  return true;
+}
 
 
 
+//2
+
+
+function chunkArrayInGroups(arr, size) {
+  // Break it up.
+  let newArr = [];
+  for (let i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, i + size));        //Slice  не меняет массив, а создает копию отрезанного фрагмента
+  }
+  return newArr;
+}
+
+//
+
+function chunkArrayInGroups(arr, size) {
+  let newArr = [];
+  while (arr.length > 0) {
+    newArr.push(arr.splice(0, size));     // SPPPPLICE меняет массив
+  }
+  return newArr;
+}
 
 
 
+//3
+
+let dog = {
+  name: "Ai",
+  numLegs: 4
+
+};
 
 
+//4
+
+let dog = {
+  name: "Spot",
+  numLegs: 4
+};
+// Only change code below this line
+
+console.log(dog.name)
+
+console.log(dog.numLegs)
+
+// 5
+
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+sayLegs:function() {return "This dog has " + dog.numLegs + " legs.";}
+};
+
+
+
+//6  this.numLegs
+
+let dog = {
+  name: "Spot",
+  numLegs: 4,
+  sayLegs: function() {return "This dog has " + this.numLegs + " legs.";}
+};
+
+dog.sayLegs();
+
+// 7
+
+function Dog() {
+  this.name = "Tuzik";
+  this.color = "grey";
+  this.numLegs = 4;
+}
+
+
+//8
+
+function Dog() {
+  this.name = "Rupert";
+  this.color = "brown";
+  this.numLegs = 4;
+}
+// Only change code below this line
+
+let hound = new Dog();
+
+console.log(hound.name)
+
+hound.name = "Piter";
+
+console.log(hound.name)
+
+
+
+// 9
+
+function Dog(name, color) {
+  this.name = name;
+  this.color = color
+  this.numLegs = 4;
+  
+  }
+  
+  let terrier = new Dog("Lulu", "white")
+  
+  console.log(terrier)
+
+
+//10 
+
+function House(numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+
+// Only change code below this line
+
+let myHouse = new House(3)
+
+console.log(myHouse instanceof House)
 
 
 
