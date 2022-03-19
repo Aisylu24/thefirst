@@ -327,3 +327,34 @@ function defineSuit(card) {
         return [chicken, cow];
       }
     }
+
+
+
+    // Area or Perimeter
+
+    const areaOrPerimeter = function(l , w) {
+      if (l == w)
+      return l*w
+      else return (l+w)*2
+        // Return your answer
+      };
+
+
+  //  Area or Perimeter 2
+  
+  const areaOrPerimeter = (l , w) => l === w ? l*w : 2*(l+w);
+
+
+  // 
+
+  String.prototype.toAlternatingCase = function () {
+    let str = '';
+      for(let i = 0; i< this.length; i++){
+        if (this[i] == this[i].toLowerCase()){ 
+          str += this[i].toUpperCase();
+        } else {
+          str += this[i].toLowerCase();
+        }
+      }
+      return str;
+    }
