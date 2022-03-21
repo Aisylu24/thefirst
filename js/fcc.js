@@ -2849,6 +2849,225 @@ let beagle = new Dog();
 
 
 
+// 2103 1 
+
+function Animal() {}
+function Bird() {}
+function Dog() {}
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Add your code below this line
+Bird.prototype.constructor = Bird;
+Dog.prototype.constructor = Dog;
+
+let duck = new Bird();
+let beagle = new Dog();
+
+
+// 2
+
+function Animal() {}
+Animal.prototype.eat = function() {
+  console.log("nom nom nom");
+};
+
+function Dog() {}
+
+// Add your code below this line
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function() {
+  console.log("Woof!");
+};
+// Add your code above this line
+
+let beagle = new Dog();
+
+beagle.eat(); // Should print "nom nom nom"
+beagle.bark(); // Should print "Woof!"
+
+
+// 3
+
+function Bird() { }
+
+Bird.prototype.fly = function() { return "I am flying!"; };
+
+function Penguin() { }
+Penguin.prototype = Object.create(Bird.prototype);
+Penguin.prototype.constructor = Penguin;
+
+// Only change code below this line
+Penguin.prototype.fly = function() {
+  return "Alas, this is a flightless bird.";
+}
+
+// Only change code above this line
+
+let penguin = new Penguin();
+console.log(penguin.fly());
+
+
+//4
+
+
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+// Add your code below this line
+let glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("Gliding!");
+  };
+};
+glideMixin(bird);
+glideMixin(boat);
+
+
+
+//5
+
+
+function Bird() {
+  let weight = 15
+  this.getWeight = function() {
+    return weight 
+  };
+}
+
+let duck = new Bird()
+console.log(duck.getWeight())
+
+
+//
+
+function Bird() {
+  let weight = 15;
+  this.getWeight = () => weight;  
+}
+
+
+// 6
+(function () {
+  console.log("A cozy nest is ready");
+})()
+
+
+// 7
+
+let funModule = (function() {
+  return {
+    isCuteMixin: function(obj) {
+      obj.isCute = function() {
+        return true;
+      };
+    },
+    singMixin: function(obj) {
+      obj.sing = function() {
+        console.log("Singing to an awesome tune");
+      };
+    }
+  };
+})();
+
+
+//
+
+let funModule = ( () => {
+  return {
+    isCuteMixin: (obj) => {
+      obj.isCute = () => { true; };
+    },
+    singMixin: (obj) => {
+      obj.sing = () => { console.log("Singing to an awesome tune"); }
+    }
+
+  }
+})();
+
+
+
+//8
+
+
+// Function that returns a string representing a cup of green tea
+const prepareTea = () => 'greenTea';
+
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+a specific type of tea).
+*/
+const getTea = (numOfCups) => {
+  const teaCups = [];
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+// Only change code below this line
+const tea4TeamFCC = getTea(40) ;
+// Only change code above this line
+
+
+console.log(tea4TeamFCC);
+
+
+
+//9
+
+// Function that returns a string representing a cup of green tea
+const prepareGreenTea = () => 'greenTea';
+
+// Function that returns a string representing a cup of black tea
+const prepareBlackTea = () => 'blackTea';
+
+/*
+Given a function (representing the tea type) and number of cups needed, the
+following function returns an array of strings (each representing a cup of
+a specific type of tea).
+*/
+const getTea = (prepareTea, numOfCups) => {
+  const teaCups = [];
+
+  for(let cups = 1; cups <= numOfCups; cups += 1) {
+    const teaCup = prepareTea();
+    teaCups.push(teaCup);
+  }
+  return teaCups;
+};
+
+// Only change code below this line
+const tea4GreenTeamFCC = getTea(prepareGreenTea, 27);
+const tea4BlackTeamFCC = getTea(prepareBlackTea, 13);
+// Only change code above this line
+
+console.log(
+  tea4GreenTeamFCC,
+  tea4BlackTeamFCC
+);
+
+
+
+
+
+
+
+
+
+
 
 
 

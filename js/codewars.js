@@ -371,3 +371,30 @@ function defineSuit(card) {
                 
        // moment of truth
      }
+
+
+
+// Volume of a Cuboid
+
+
+class Kata {
+  static getVolumeOfCuboid(l, w, h) {
+return l*w*h
+    // your code here
+  }
+}
+
+
+// Add new item (collections are passed by reference)
+
+function addExtra( listOfNumbers ){
+  // your code here
+  // add an int to listOfNumbers and return it
+  return [...listOfNumbers, 13];
+}
+
+//
+
+function addExtra(listOfNumbers) {
+  return listOfNumbers.concat(0)
+}
