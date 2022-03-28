@@ -406,3 +406,9 @@ function sumMul(n, m) {
   const l = m - (m % n || n);
   return (n + l) / 2 * l / n;
 }
+
+
+
+// Reversed Words
+function reverseWords(str) {
+  return str.split(' ').reverse().join(' ')}
