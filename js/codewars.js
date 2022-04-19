@@ -412,3 +412,10 @@ function sumMul(n, m) {
 // Reversed Words
 function reverseWords(str) {
   return str.split(' ').reverse().join(' ')}
+
+
+// To square(root) or not to square(root)
+
+  function squareOrSquareRoot(array) {
+    return array.map(e => Number.isInteger(Math.sqrt(e)) ? Math.sqrt(e) : e*e);  
+  }

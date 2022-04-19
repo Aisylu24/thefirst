@@ -3181,6 +3181,80 @@ const ratings = watchList.map(item => ({
 const ratings = watchList.map(({ Title: title, imdbRating: rating }) => ({title, rating}));
 
 
+// 2803 1
+
+// The global Array
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  var newArray = [];
+
+  // Add your code below this line
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i]));
+  }
+  // Add your code above this line
+
+  return newArray;
+};
+
+var new_s = s.myMap(function(item) {
+  return item * 2;
+});
+
+
+
+//2
+ 
+
+// my 
+const filteredList = watchList
+.filter(item => item.imdbRating >= 8)
+.map(({ Title: title, imdbRating: rating }) => ({title, rating}));
+// Only change code above this line
+
+console.log(filteredList);
+
+// 
+
+const filteredList = watchList
+  .filter(movie => movie.imdbRating >= 8.0)
+  .map(movie => ({ title: movie["Title"], rating: movie["imdbRating"] }));
+// Only change code above this line
+console.log(filteredList);
+
+
+//
+
+const filteredList = watchList
+  .filter(({ imdbRating }) => imdbRating >= 8.0)
+  .map(({ Title: title, imdbRating: rating }) => ({ title, rating }));
+// Only change code above this line
+
+console.log(filteredList);
+
+
+
+
+//3 
+
+function sliceArray(anim, beginSlice, endSlice) {
+  // Only change code below this line
+return anim.slice(beginSlice,endSlice)
+  // Only change code above this line
+}
+
+const inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
+
+
+
+// 4 
+
+
+
+
+
 
 
 
